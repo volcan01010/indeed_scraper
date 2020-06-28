@@ -1,0 +1,330 @@
+{
+    "base64EncodedJson": "eyJhIjp0cnVlLCJjIjp0cnVlLCJkIjpmYWxzZSwiZSI6dHJ1ZSwiZyI6Imh0dHA6Ly93d3cuaW5kZWVkLmNvLnVrL20vYmFzZWNhbXAvdmlld2pvYj9jbXA9SGFycmluZ3RvbnMtU2FsZXMtJTI2LUxldHRpbmdzJnQ9QWNjb3VudCtBc3Npc3RhbnQmams9OWEyNTY1ZjJiMDc2YjZmMCZ2anM9MyIsImgiOiJBY2NvdW50cyBBc3Npc3RhbnQiLCJpIjoiRHVyaGFtIERIMSIsImoiOiJvcmdhbmljIiwibCI6IiJ9",
+    "baseInboxUrl": "https://inbox.indeed.com",
+    "baseUrl": "https://www.indeed.co.uk",
+    "clientsideProctorGroups": {
+        "mobcompanylinktst": true,
+        "mobvj_hideapplyemail_tst": false,
+        "mobvjpsfeedbacktst": false,
+        "jasx_track_multisession_noapplies": false,
+        "sal_insights_tab_redesign_tst": false,
+        "jasx_hidephonenumber_tst": true
+    },
+    "companyFollowForm": {
+        "addAlertUrl": "/alert?a=add&alert_params=followCompany%3D120e0826c1f88706&q=company%3A%27Harringtons+Sales+%26+Lettings+Limited%27&alert_period=weekly&output=json&verified=0&tk=1ebudsu72q5la800&hct=dc8934d52516f15498d7895fbd849f00",
+        "cancelText": "By creating a company alert you agree to our <a href=\"/legal\" target=\"_blank\">Terms</a>. You can change your consent settings at any time by unsubscribing, or as detailed in our terms.",
+        "checkAlertUrl": "/rpc/jobalert?a=check&app=acme&q=company%3A%27Harringtons+Sales+%26+Lettings+Limited%27&followCompany=120e0826c1f88706",
+        "confirmationHeader": "Please check your email",
+        "confirmationSubHeader": "we have sent a confirmation message",
+        "confirmationText": "Click on the link in this email to start receiving your Company Alert.",
+        "createAlertUrl": "/my/alerts?a=create&alert_params=followCompany%3D120e0826c1f88706&alert_keywords=company%3A%27Harringtons+Sales+%26+Lettings+Limited%27&alert_period=weekly&output=json&followCompany=120e0826c1f88706&hct=dc8934d52516f15498d7895fbd849f00",
+        "cta": "Get job updates from Harringtons Sales & Lettings Limited",
+        "duplicateEmailMessage": "You are already following this company.",
+        "followButton": {
+            "buttonSize": "sm",
+            "buttonType": "tertiary",
+            "children": "Follow",
+            "disabled": false,
+            "isBlock": false,
+            "isResponsive": false,
+            "size": "sm"
+        },
+        "followingText": "Following",
+        "input": {
+            "disabled": false,
+            "errorText": "This field is required",
+            "helpText": null,
+            "id": null,
+            "isSmall": false,
+            "label": "My Email:",
+            "name": "email",
+            "type": "text",
+            "value": null
+        },
+        "invalidEmailMessage": "Please provide a valid email address.",
+        "saveButton": {
+            "buttonSize": null,
+            "buttonType": "secondary",
+            "children": "Save",
+            "disabled": false,
+            "isBlock": true,
+            "isResponsive": false,
+            "size": "sm"
+        }
+    },
+    "country": "GB",
+    "ctk": "1ebudsu5v14vi000",
+    "dcmModel": {
+        "category": "jobse0",
+        "source": "8232301",
+        "type": "organic"
+    },
+    "desktop": true,
+    "desktopSponsoredJobSeenData": "tk=1ebudsu72q5la800",
+    "dgToken": "27380D4D85B4C63239FF5C1F31BA4E0F",
+    "googleOneTapModel": {
+        "baseSecureUrl": "https://secure.indeed.com",
+        "googleClientID": "1047839414793-v442kdo3pt0vb43l8nu2c5sh9lf4bsnj.apps.googleusercontent.com",
+        "googleOneTapVersion": 2,
+        "redirectUrl": null
+    },
+    "indeedApplyButtonContainer": {
+        "disabled": false,
+        "earlyApplyMessageModel": null,
+        "employerResponsiveCard": null,
+        "hasMessage": false,
+        "indeedApplyAttributes": {
+            "content": "data-indeed-apply-apiToken='aa102235a5ccb18bd3668c0e14aa3ea7e2503cfac2a7a9bf3d6549899e125af4' data-indeed-apply-jobTitle='Accounts Assistant' data-indeed-apply-jobId='5eb7ab68e281e59e088a' data-indeed-apply-jobLocation='Durham DH1' data-indeed-apply-jobCompanyName='Harringtons Sales &amp; Lettings Limited' data-indeed-apply-jobUrl='https://www.indeed.co.uk/viewjob?jk=9a2565f2b076b6f0' data-indeed-apply-questions='nigma://Wmh2b15RFlhdGUxZREFn?locale=en_GB&amp;v=3' data-indeed-apply-postUrl='https://dradisindeedapply.sandbox.indeed.net/process-indeedapply' data-indeed-apply-coverletter='optional' data-indeed-apply-resume='required' data-indeed-apply-advnum='2605239928954419' data-indeed-apply-pingbackUrl='https://gdc.indeed.com/conv/orgIndApp?vjtk=1ebudsu72q5la800&amp;jk=9a2565f2b076b6f0&amp;co=GB' data-indeed-apply-noButtonUI='true' data-indeed-apply-continueUrl='http://www.indeed.co.uk/viewjob?cmp=Harringtons-Sales-%26-Lettings&amp;t=Account+Assistant&amp;jk=9a2565f2b076b6f0&amp;vjs=3&amp;applied=1&amp;re=1&amp;sita=1&amp;from=postapply' data-indeed-apply-onappliedstatus='_updateIndeedApplyStatus' data-indeed-apply-onready='_onButtonReady' data-indeed-apply-jk='9a2565f2b076b6f0' data-indeed-apply-clickhandler=\"window.top.postMessage({eventType: 'click'}, '*')\" data-indeed-apply-dismisshandler=\"window.top.postMessage({eventType: 'dismiss'}, '*')\" data-indeed-apply-inpageapplyhandler=\"window.top.postMessage({eventType: 'inpageapply'}, '*')\" data-indeed-apply-recentapplies='{\"all\":-1,\"qualified\":-1}'",
+            "contentKind": "ATTRIBUTES"
+        },
+        "indeedApplyButtonModel": {
+            "buttonSize": "block",
+            "buttonType": "branded",
+            "contentHtml": "Apply with Indeed",
+            "dataHref": null,
+            "href": "/",
+            "icon": null,
+            "isBlock": false,
+            "largeScreenSizeText": null,
+            "openInNewTab": false,
+            "referrerpolicy": null,
+            "rel": null,
+            "sanitizedHref": null,
+            "sanitizedHtml": null,
+            "sticky": false,
+            "target": null,
+            "title": null,
+            "viewJobDisplay": null
+        },
+        "indeedApplyScriptAttributes": {
+            "data-indeed-apply-qs": "vjtk=1ebudsu72q5la800&twoPaneVjGroup=-1"
+        },
+        "indeedApplyScriptLocation": "https://apply.indeed.com/indeedapply/static/scripts/app/bootstrap.js?hl=en&co=GB&source=idd-vj",
+        "manyAppliesMessageModel": null,
+        "shouldUseButtonPlaceholder": false,
+        "twoPaneVjGroup": null,
+        "viewFormUrl": null,
+        "viewFormUrlAttribute": {
+            "content": "",
+            "contentKind": "ATTRIBUTES"
+        }
+    },
+    "indeedChatEmployerModel": {
+        "chatEnabled": false
+    },
+    "jasJobViewPingModel": {
+        "url": "https://jas.indeednps.com/?jk=9a2565f2b076b6f0&ak=0b1d3d87bcaeb5ba75cf"
+    },
+    "jobKey": "9a2565f2b076b6f0",
+    "jobLocation": "Durham DH1",
+    "jobSeenData": "tk=1ebudsu72q5la800&context=viewjobrecs",
+    "jobTitle": "Accounts Assistant",
+    "language": "en",
+    "locale": "en_GB",
+    "localeData": {
+        "": [
+            null,
+            "Project-Id-Version: \nReport-Msgid-Bugs-To: \nPOT-Creation-Date: 2020-06-24 19:37-0500\nPO-Revision-Date: 2020-06-24 10:59+0000\nLast-Translator: Auto Generated <noreply@indeed.com>\nLanguage-Team: English (United Kingdom) <https://weblate.corp.indeed.com/projects/indeed/indeedmobile-i18n-content/en_GB/>\nLanguage: en_GB\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=n != 1;\nX-Generator: Weblate 3.9.1\n"
+        ]
+    },
+    "mobtk": "1ebudsu72q5la800",
+    "notifications": {
+        "inboxLinkEnabled": false,
+        "messagesLabel": "Messages",
+        "newMessagesCountPlurals": [
+            "{0} new",
+            "{0} new"
+        ],
+        "notificationCenterEnabled": false,
+        "updatingText": "checking..."
+    },
+    "pageId": "viewjob",
+    "relatedLinks": [
+        {
+            "href": "/jobs?q=Accounts+Assistant&from=vj&l=Durham",
+            "linkText": "Accounts Assistant jobs in Durham"
+        },
+        {
+            "href": "/jobs?q=Harringtons+Sales+%26+Lettings&from=vj&l=Durham",
+            "linkText": "Jobs at Harringtons Sales & Lettings in Durham"
+        },
+        {
+            "href": "/salary?q1=Accounts+Assistant&from=vj&l1=Durham",
+            "linkText": "Accounts Assistant salaries in Durham"
+        }
+    ],
+    "salaryInfoModel": {
+        "disclaimerIcon": null,
+        "featureTokens": [],
+        "indeedEstimateText": null,
+        "salaryEstimationDisclaimer": null,
+        "salarySource": "EXTRACTION",
+        "salaryText": "\u00a325,000 a year",
+        "salaryTextFormatted": false
+    },
+    "saveJobButtonContainerModel": {
+        "alreadySavedButtonModel": {
+            "actions": [
+                "Saved",
+                "Applied",
+                "Interviewing",
+                "Offered",
+                "Hired"
+            ],
+            "buttonSize": "block",
+            "buttonType": "secondary",
+            "contentHtml": "Saved",
+            "href": "/",
+            "iconSize": null
+        },
+        "applyFromComputerButtonModel": null,
+        "applyFromComputerLogUrl": "/m/rpc/log/emailmyself?jk=9a2565f2b076b6f0&mobvjtk=1ebudsu72q5la800&sbt=dc8934d52516f15498d7895fbd849f00&ctk=1ebudsu5v14vi000&acctKey=",
+        "currentJobState": "VISITED",
+        "didYouApplyPromptModel": {
+            "calloutModel": {
+                "actionsList": null,
+                "actionsMap": {
+                    "NO": {
+                        "children": "Not interested",
+                        "className": null,
+                        "href": null,
+                        "target": null
+                    },
+                    "LATER": {
+                        "children": "Maybe later",
+                        "className": null,
+                        "href": null,
+                        "target": null
+                    },
+                    "YES": {
+                        "children": "Yes",
+                        "className": null,
+                        "href": null,
+                        "target": null
+                    }
+                },
+                "caretPosition": null,
+                "children": null,
+                "dismissAriaLabel": "Close",
+                "dismissAttributes": null,
+                "dismissHref": null,
+                "heading": "Did you apply?"
+            },
+            "jobKey": "9a2565f2b076b6f0",
+            "possibleResponses": {
+                "NO": "NO",
+                "LATER": "LATER",
+                "YES": "YES"
+            },
+            "userCanView": false
+        },
+        "didYouApplyResponseUrl": "/m/rpc/didyouapply?tk=1ebudsu72q5la800&jobKey=9a2565f2b076b6f0&originPage=viewjob&from=viewjob",
+        "hashedCSRFToken": "dc8934d52516f15498d7895fbd849f00",
+        "isAlreadySavedButtonVisible": false,
+        "isDisableJobStatusChange": false,
+        "isLoggedIn": false,
+        "isSaveWithoutLoginEnabled": false,
+        "isSticky": false,
+        "isSyncJobs": false,
+        "mobtk": "1ebudsu72q5la800",
+        "myIndeedLoginLink": "https://www.indeed.co.uk/account/login?dest=%2Fviewjob%3Fcmp%3DHarringtons-Sales-%2526-Lettings%26t%3DAccount%2BAssistant%26jk%3D9a2565f2b076b6f0%26vjs%3D3",
+        "myJobsAPIHref": "/rpc/log/myjobs/transition_job_state?client=mobile&cause=statepicker&preserveTimestamp=false&tk=1ebudsu72q5la800&jobKey=9a2565f2b076b6f0&originPage=viewjob",
+        "myJobsURL": "/myjobs/?from=mobvj#",
+        "pageId": "viewjob",
+        "possibleJobActions": {
+            "SAVED": "save",
+            "APPLIED": "apply",
+            "INTERVIEWING": "interview",
+            "OFFERED": "offer",
+            "HIRED": "hire",
+            "VISITED": "visit",
+            "ARCHIVED": "archive"
+        },
+        "possibleJobStates": {
+            "SAVED": "Saved",
+            "APPLIED": "Applied",
+            "INTERVIEWING": "Interviewing",
+            "OFFERED": "Offered",
+            "HIRED": "Hired",
+            "VISITED": "Visited",
+            "ARCHIVED": "Archived"
+        },
+        "saveButtonModel": {
+            "buttonSize": "block",
+            "buttonType": "secondary",
+            "contentHtml": "Save this job",
+            "dataHref": null,
+            "href": "/",
+            "icon": {
+                "iconTitle": "save-icon",
+                "iconType": "favorite-border"
+            },
+            "isBlock": false,
+            "largeScreenSizeText": null,
+            "openInNewTab": false,
+            "referrerpolicy": null,
+            "rel": null,
+            "sanitizedHref": null,
+            "sanitizedHtml": null,
+            "sticky": false,
+            "target": null,
+            "title": null,
+            "viewJobDisplay": "DESKTOP_STANDALONE"
+        },
+        "showSaveJobInlineCallout": true,
+        "smallButtonModel": null,
+        "uistates": {
+            "INTERVIEWING": "INTERVIEWING",
+            "OFFERED": "OFFERED",
+            "SAVED": "SAVED",
+            "VISITED": "VISITED",
+            "HIRED": "HIRED",
+            "ARCHIVED": "ARCHIVED",
+            "APPLIED": "APPLIED"
+        },
+        "viewJobDisplay": "DESKTOP_STANDALONE"
+    },
+    "saveJobCalloutModel": {
+        "actionsList": null,
+        "actionsMap": {
+            "createaccount": {
+                "children": "Create account (it's free)",
+                "className": null,
+                "href": "https://www.indeed.co.uk/account/register?dest=%2Fviewjob%3Fcmp%3DHarringtons-Sales-%2526-Lettings%26t%3DAccount%2BAssistant%26jk%3D9a2565f2b076b6f0%26vjs%3D3",
+                "target": "self"
+            },
+            "signin": {
+                "children": "Sign in",
+                "className": null,
+                "href": "https://www.indeed.co.uk/account/login?dest=%2Fviewjob%3Fcmp%3DHarringtons-Sales-%2526-Lettings%26t%3DAccount%2BAssistant%26jk%3D9a2565f2b076b6f0%26vjs%3D3",
+                "target": "self"
+            }
+        },
+        "caretPosition": null,
+        "children": "You must sign in to save jobs:",
+        "dismissAriaLabel": "Close",
+        "dismissAttributes": null,
+        "dismissHref": null,
+        "heading": "Save jobs and view them from any computer."
+    },
+    "saveJobFailureModalModel": {
+        "closeAriaLabel": "Close",
+        "closeButtonText": "Close",
+        "message": "Please retry",
+        "signInButtonText": null,
+        "signInHref": null,
+        "title": "Failed to Save Job"
+    },
+    "saveJobLimitExceededModalModel": {
+        "closeAriaLabel": "Close",
+        "closeButtonText": null,
+        "message": "You reached the limit. Please log in to save additional jobs.",
+        "signInButtonText": "Sign in",
+        "signInHref": "https://www.indeed.co.uk/account/login?dest=%2Fviewjob%3Fcmp%3DHarringtons-Sales-%2526-Lettings%26t%3DAccount%2BAssistant%26jk%3D9a2565f2b076b6f0%26vjs%3D3&from=viewjob_savejoblimitmodal",
+        "title": "You've already saved 20 jobs"
+    },
+    "showEmployerResponsiveCard": true,
+    "stickyType": "ALWAYS",
+    "validationToken": "e0D28BpaHYJrg7AfHHQreB6uCZq9lj1rF8Rk7C7d/h0=",
+    "viewJobDisplay": "DESKTOP_STANDALONE"
+}
