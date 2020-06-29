@@ -1,7 +1,10 @@
 """Scrape job data from Indeed website"""
 import logging
 
+import bs4
 import requests
+
+from schemas import IndeedJobSpec
 
 logger = logging.getLogger(__name__)
 
@@ -20,6 +23,8 @@ def scrape_indeed_job(job_key):
     :param job_key: str, job key
     :return IndeedJob: SQLAlchemy model for Indeed job
     """
+    logger.info("Scraping job_key: %s", job_key)
+
     # Fetch HTML from website
     try:
         html = fetch_html(job_key)
@@ -29,7 +34,8 @@ def scrape_indeed_job(job_key):
 
     # Extract information into job spec
     job_spec = extract_job_spec(job_key, html)
-    return html
+
+    return job_spec
 
 
 def fetch_html(job_key):
@@ -54,4 +60,10 @@ def extract_job_spec(job_key, html):
     :param html: str, html from web page
     :return IndeedJobSpec: SQLAlchemy model for Indeed job
     """
-    pass
+    soup = bs4.BeautifulSoup(html, features='lxml')
+    description = soup.findAll("div", class_="jobsearch-jobDescriptionText")[0]
+
+    spec = IndeedJobSpec(job_key=job_key,
+                         description=description)
+
+    return spec
