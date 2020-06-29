@@ -60,10 +60,41 @@ def extract_job_spec(job_key, html):
     :param html: str, html from web page
     :return IndeedJobSpec: SQLAlchemy model for Indeed job
     """
+    # Extract description from html
     soup = bs4.BeautifulSoup(html, features='lxml')
     description = soup.findAll("div", class_="jobsearch-jobDescriptionText")[0]
 
+    # Extract attributes from description
+
+    def text_that_follows(attribute):
+        """Return text from tag following one containing named attribute."""
+        return description.find('p', text=attribute).nextSibling.string
+
+    def text_that_starts_with(attribute):
+        """Return trimmed text from tag that starts with named attribute."""
+        full_text = description.find(
+            'p', text=lambda x: x.startswith(attribute)).string
+        return full_text.replace(attribute, '').strip()
+
+    summary = description.find('b', text='Job Summary').parent.nextSibling.text
+    duties = None  # Save this trickier one for later
+    job_types = text_that_starts_with('Job Types:')
+    salary = text_that_starts_with('Salary:')
+    benefits = text_that_follows('Benefits:')
+    experience = None  # Save this one for later
+    licence = text_that_follows('Licence:')
+    work_remotely = text_that_follows('Work remotely:')
+
+    # Build model
     spec = IndeedJobSpec(job_key=job_key,
-                         description=description)
+                         summary=summary,
+                         duties=duties,
+                         job_types=job_types,
+                         salary=salary,
+                         benefits=benefits,
+                         experience=experience,
+                         licence=licence,
+                         work_remotely=work_remotely
+                         )
 
     return spec

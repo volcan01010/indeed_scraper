@@ -7,10 +7,18 @@ Base = declarative_base()
 
 
 class IndeedJobSpec(Base):
+    """Model for Indeed job specification."""
     __tablename__ = 'indeed_job_specs'
 
     job_key = Column(String, primary_key=True)
-    description = Column(String)
+    summary = Column(String)
+    duties = Column(String)
+    job_types = Column(String)
+    salary = Column(String)
+    benefits = Column(String)
+    experience = Column(String)
+    licence = Column(String)
+    work_remotely = Column(String)
 
     def __repr__(self):
         return f"<IndeedJob(job_key={self.job_key})>"
