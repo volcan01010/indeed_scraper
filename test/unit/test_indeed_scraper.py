@@ -15,7 +15,7 @@ def test_extract_job_spec(harringtons_job_key, harringtons_html):
         job_types="Full-time, Permanent",
         salary="£25,000.00 /year",
         benefits="On-site Parking",
-        experience=None,
+        experience="Accounting: 5 years (Required)|Sage Line 50: 5 years (Required)",
         licence="Driving (Required)",
         work_remotely="Temporarily due to COVID-19"
     )

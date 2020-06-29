@@ -4,7 +4,7 @@ import logging
 import bs4
 import requests
 
-from schemas import IndeedJobSpec
+from schemas import IndeedJobSpec, IndeedJobSpecSchema
 
 logger = logging.getLogger(__name__)
 
@@ -60,6 +60,7 @@ def extract_job_spec(job_key, html):
     :param html: str, html from web page
     :return IndeedJobSpec: SQLAlchemy model for Indeed job
     """
+    logger.debug("Building model for %s", job_key)
     # Extract description from html
     soup = bs4.BeautifulSoup(html, features='lxml')
     description = soup.findAll("div", class_="jobsearch-jobDescriptionText")[0]
@@ -70,6 +71,12 @@ def extract_job_spec(job_key, html):
         """Return text from tag following one containing named attribute."""
         return description.find('p', text=attribute).nextSibling.string
 
+    def list_that_follows(attribute):
+        """Return a pipe-separated string of items from list following
+        attribute."""
+        items = description.find('p', text=attribute).next_sibling.findAll('li')  # noqa
+        return '|'.join(item.string for item in items)
+
     def text_that_starts_with(attribute):
         """Return trimmed text from tag that starts with named attribute."""
         full_text = description.find(
@@ -77,13 +84,14 @@ def extract_job_spec(job_key, html):
         return full_text.replace(attribute, '').strip()
 
     summary = description.find('b', text='Job Summary').parent.nextSibling.text
-    duties = None  # Save this trickier one for later
+    duties = None  # Save this fiddly one for later
     job_types = text_that_starts_with('Job Types:')
     salary = text_that_starts_with('Salary:')
-    benefits = text_that_follows('Benefits:')
-    experience = None  # Save this one for later
-    licence = text_that_follows('Licence:')
-    work_remotely = text_that_follows('Work remotely:')
+    # TODO: define normalised schemas for these
+    benefits = list_that_follows('Benefits:')
+    experience = list_that_follows('Experience:')
+    licence = list_that_follows('Licence:')
+    work_remotely = list_that_follows('Work remotely:')
 
     # Build model
     spec = IndeedJobSpec(job_key=job_key,
@@ -98,3 +106,10 @@ def extract_job_spec(job_key, html):
                          )
 
     return spec
+
+
+if __name__ == '__main__':
+    logging.basicConfig(level=logging.DEBUG)
+    schema = IndeedJobSpecSchema()
+    harringtons_spec = scrape_indeed_job('9a2565f2b076b6f0')
+    print(schema.dump(harringtons_spec))
