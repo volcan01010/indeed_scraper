@@ -1,4 +1,5 @@
 """Scrape job data from Indeed website"""
+import datetime
 import logging
 
 import bs4
@@ -87,11 +88,11 @@ def extract_job_spec(job_key, html):
     duties = None  # Save this fiddly one for later
     job_types = text_that_starts_with('Job Types:')
     salary = text_that_starts_with('Salary:')
-    # TODO: define normalised schemas for these
     benefits = list_that_follows('Benefits:')
     experience = list_that_follows('Experience:')
     licence = list_that_follows('Licence:')
     work_remotely = list_that_follows('Work remotely:')
+    fetched_at = datetime.datetime.now()
 
     # Build model
     spec = IndeedJobSpec(job_key=job_key,
@@ -102,7 +103,8 @@ def extract_job_spec(job_key, html):
                          benefits=benefits,
                          experience=experience,
                          licence=licence,
-                         work_remotely=work_remotely
+                         work_remotely=work_remotely,
+                         fetched_at=fetched_at
                          )
 
     return spec

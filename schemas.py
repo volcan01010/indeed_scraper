@@ -37,6 +37,11 @@ class IndeedJobSpec(Base):
     work_remotely = Column(String)
     fetched_at = Column(DateTime, nullable=False)
 
+    # TODO: add these later when they can be parsed from html, as they come
+    # from a different section to the data above
+    # company = Column(String)
+    # location = Column(String)
+
     def __repr__(self):
         return f"<IndeedJob(job_key={self.job_key})>"
 
