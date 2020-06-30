@@ -1,7 +1,23 @@
-"""SQLAlchemy model schemas for data items"""
+"""
+SQLAlchemy model schemas for data items
+
+This file describes a flat schema for the Indeed Job spec, as created from the
+webpages.  This is used for passing data forward via queues to be enhanced. A
+more normalised schema could be used for the final data store.  For example:
+
++ Making job types, licence, work-remotely, benefits come from different
+  tables allows constraint of values and defining a one-to-many relationship.
++ Making company an external table allows company data to be joined with other
+  job information.
++ A normalised location makes it easier to search for jobs in the same town.
+
+These features aren't necessary at this point and are best implemented at the
+final database storage step.  If the fields are likely to be used only in full
+text searches, it may not even be necessary to normalise them.
+"""
 from marshmallow_sqlalchemy import SQLAlchemyAutoSchema
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy import Column, String
+from sqlalchemy import Column, String, DateTime
 
 Base = declarative_base()
 
@@ -19,6 +35,7 @@ class IndeedJobSpec(Base):
     experience = Column(String)
     licence = Column(String)
     work_remotely = Column(String)
+    fetched_at = Column(DateTime, nullable=False)
 
     def __repr__(self):
         return f"<IndeedJob(job_key={self.job_key})>"

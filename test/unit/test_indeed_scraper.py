@@ -1,8 +1,12 @@
 """Unit tests for indeed_scraper"""
+import datetime
+
+from freezegun import freeze_time
 from indeed_scraper import extract_job_spec
 from schemas import IndeedJobSpec, IndeedJobSpecSchema
 
 
+@freeze_time(datetime.datetime(2020, 6, 30, 12, 0, 0))
 def test_extract_job_spec(harringtons_job_key, harringtons_html):
     # Arrange
 
@@ -15,9 +19,10 @@ def test_extract_job_spec(harringtons_job_key, harringtons_html):
         job_types="Full-time, Permanent",
         salary="£25,000.00 /year",
         benefits="On-site Parking",
-        experience="Accounting: 5 years (Required)|Sage Line 50: 5 years (Required)",
+        experience="Accounting: 5 years (Required)|Sage Line 50: 5 years (Required)",  # noqa
         licence="Driving (Required)",
-        work_remotely="Temporarily due to COVID-19"
+        work_remotely="Temporarily due to COVID-19",
+        fetched_at=datetime.datetime(2020, 6, 30, 12, 0, 0)
     )
     schema = IndeedJobSpecSchema()
 
