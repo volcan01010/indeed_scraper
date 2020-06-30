@@ -21,11 +21,14 @@ def fetch_job_details():
     Fetch details for jobs on queue and store results or mark
     as failed.
     """
-    logger.info('Fetching job_keys')
+    logger.info('Fetching job details begins')
     job_keys = read_job_keys_from_queue()
 
-    for job_key in job_keys:
-        fetch_and_register(job_key)
+    # Fetching web data is I/O bound so can be sped up by threads
+    with ThreadPoolExecutor() as executor:
+        executor.map(fetch_and_register, job_keys)
+
+    logger.info('Fetching job details complete')
 
 
 def read_job_keys_from_queue():
@@ -50,10 +53,12 @@ def export_result(job_details):
     results_queue = Path('results.txt')
     with open(results_queue, 'at') as outfile:
         outfile.write(job_details_json + '\n')
+    logger.debug("%s stored to file", job_details_dict['job_key'])
 
 
 def mark_as_failed(job_key, exc):
     """Append failure details to file."""
+    logger.error("%s failed", job_key)
     message = f"{job_key}|{exc.args[0]}\n"
     failures_queue = Path('failed_keys.txt')
     with open(failures_queue, 'at') as outfile:

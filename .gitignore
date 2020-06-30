@@ -127,3 +127,5 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+failed_keys.txt
+results.txt
