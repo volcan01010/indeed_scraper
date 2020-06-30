@@ -1,6 +1,8 @@
 """
 Code for the Fetch Job Details part of the pipeline.  This could be configured
 with queues for incoming job_keys and outgoing data and error messages.
+
+For now, it repeatedly downloads the example page and a failed page.
 """
 from concurrent.futures import ThreadPoolExecutor
 import json
@@ -32,7 +34,7 @@ def fetch_job_details():
 
 
 def read_job_keys_from_queue():
-    return ['9a2565f2b076b6f0', '9a2565f2b076b6f0', 'not-a-job']
+    return 4 * ['9a2565f2b076b6f0', '9a2565f2b076b6f0', 'not-a-job']
 
 
 def fetch_and_register(job_key):

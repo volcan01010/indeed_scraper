@@ -25,11 +25,14 @@ python indeed_scraper.py
 
 The code for a micropipeline is stored in `micropipeline.py`.  It will download
 job data from a queue and store to file and record exceptions.  It can be
-called from the commandline with:
+called from the command line with:
 
 ```bash
 python micropipeline.py
 ```
+
+Look at the contents of `results.txt` and `failed_keys.txt` for details.  For
+now it repeatedly calls the example job advert and a simulated failure.
 
 ### Tests
 
